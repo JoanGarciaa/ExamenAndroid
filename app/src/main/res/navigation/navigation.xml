@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/initFragment">
+
+    <fragment
+        android:id="@+id/initFragment"
+        android:name="com.example.examen_joangarcia.init.InitFragment"
+        android:label="fragment_init"
+        tools:layout="@layout/fragment_init" >
+        <action
+            android:id="@+id/action_initFragment_to_cursFragment"
+            app:destination="@id/cursFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cursFragment"
+        android:name="com.example.examen_joangarcia.view.CursFragment"
+        android:label="fragment_curs"
+        tools:layout="@layout/fragment_curs" >
+        <action
+            android:id="@+id/action_cursFragment_to_entrarFragment"
+            app:destination="@id/entrarFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/alumneFragment"
+        android:name="com.example.examen_joangarcia.view.AlumneFragment"
+        android:label="AlumneFragment" >
+        <action
+            android:id="@+id/action_alumneFragment_to_popupFragment"
+            app:destination="@id/popupFragment" />
+        <action
+            android:id="@+id/action_alumneFragment_to_listFragment"
+            app:destination="@id/listFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/entrarFragment"
+        android:name="com.example.examen_joangarcia.view.EntrarFragment"
+        android:label="fragment_entrar"
+        tools:layout="@layout/fragment_entrar" >
+        <action
+            android:id="@+id/action_entrarFragment_to_alumneFragment"
+            app:destination="@id/alumneFragment" />
+        <action
+            android:id="@+id/action_entrarFragment_to_cursFragment"
+            app:destination="@id/cursFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/popupFragment"
+        android:name="com.example.examen_joangarcia.view.PopupFragment"
+        android:label="PopupFragment" >
+        <action
+            android:id="@+id/action_popupFragment_to_listFragment"
+            app:destination="@id/listFragment" />
+        <action
+            android:id="@+id/action_popupFragment_to_alumneFragment"
+            app:destination="@id/alumneFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="com.example.examen_joangarcia.view.ListFragment"
+        android:label="ListFragment" />
+</navigation>
